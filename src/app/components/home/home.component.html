@@ -1,0 +1,10 @@
+<h1 *ngIf="user$ | async as user">Welcome to our app, {{ user.displayName }}!</h1>
+<h3> This is Your FireStore Data</h3>
+  <ul *ngIf="user$ | async as user">
+    <li>Name: {{ user.firstName }}</li>
+    <li>LastName: {{user.lastName}}</li>
+    <li>email: {{user.email}}</li>
+    <li>Address: {{user.address}}</li>
+    <li>Phone num: {{user.phone}}</li>
+  </ul>
+
