@@ -1,10 +1,14 @@
-<h1 *ngIf="user$ | async as user">Welcome to our app, {{ user.displayName }}!</h1>
-<h3> This is Your FireStore Data</h3>
-  <ul *ngIf="user$ | async as user">
-    <li>Name: {{ user.firstName }}</li>
-    <li>LastName: {{user.lastName}}</li>
-    <li>email: {{user.email}}</li>
-    <li>Address: {{user.address}}</li>
-    <li>Phone num: {{user.phone}}</li>
+<div class="form-container mat-elevation-z5 text-center">
+  <h1 *ngIf="user$ | async as user">Welcome to our app, {{ user.displayName }}!</h1>
+  <h3> This is Your current FireStore Data</h3>
+  <ul *ngIf="user$ | async as user;">
+    <li *ngIf="user?.firstName">Name: <span>{{ user.firstName }}</span></li>
+    <li *ngIf="user?.lastName">LastName: <span>{{user.lastName}}</span></li>
+    <li *ngIf="user?.email">Email: <span>{{user.email}}</span></li>
+    <li *ngIf="user?.address">Address: <span>{{user.address}}</span></li>
+    <li *ngIf="user?.phone">Phone num: <span>{{user.phone}}</span></li>
   </ul>
+
+</div>
+
 
