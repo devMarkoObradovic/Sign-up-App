@@ -14,7 +14,7 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/LandingComponent',
+    component: LandingComponent,
   },
   {
     path: 'login',
